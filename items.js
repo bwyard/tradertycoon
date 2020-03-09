@@ -70,12 +70,23 @@ class Sea extends AccessCountries{
 }
 
 let usa = new Countries('USA', 'usa',[gold,diamonds,silver,sugar], new Access(new Flight(true,false,true,true,true),new Sea(true,false,true,true,true),new Land(false,false,false,true,true)));
-
-gold.countries = ['spain',usa,'england','canada','mexico'];
-diamonds.countries = ['spain',usa,'england','canada','mexico'];
-silver.countries = ['spain',usa,'england','canada','mexico'];
-sugar.countries = ['spain',usa,'england','canada','mexico'];
+let spain = new Countries('Spain', 'spn',[gold,diamonds,silver,sugar],new Access(new Flight(false,true,true,true,true),new Sea(false,true,true,true,true), new Land(false,false,false,false,false)));
+let england = new Countries('England', 'Eng',[gold,diamonds,silver,sugar],new Access(new Flight(true,true,false,true,true),new Sea(true,true,false,true,true), new Land(false,false,false,false,false)));
+let canada = new Countries('canada', 'cnd',[gold,diamonds,silver,sugar],new Access(new Flight(true,true,true,false,true), new Sea(true,true,true,false,false),new Land(false,true,false,false,true)));
+let mexico = new Countries('mexico','mex',[gold,diamonds,silver,sugar],new Access (new Flight(true,true,true,true,false), new Sea(true,true,true,false,true), new Land(false,true,false, true, false)));
+gold.countries = ['spain','usa','england','canada','mexico'];
+diamonds.countries = ['spain','usa','england','canada','mexico'];
+silver.countries = ['spain','usa','england','canada','mexico'];
+sugar.countries = ['spain','usa','england','canada','mexico'];
 
 console.log(usa);
 
-let company = {};
+let company = {
+  name: '',
+  cash: 50000,
+  inventoryMax:50,
+  travelSpeed:1,
+  landTravel:true,
+  flightTravel:false,
+  seaTravel:true
+};
