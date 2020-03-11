@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <style media="screen">
-      body{background-color: grey;}
-      h1{
-        font-size: 18px;
-        align-items: center;
-      }
-      form{background-color: black;
-      color: white;}
-    </style>
+    <link rel="stylesheet" href="./game.css">
+
     <script src="items.js" charset="utf-8"></script>
 
     <meta charset="utf-8">
@@ -20,11 +13,13 @@
 
     <p></p>
 
+<section id="welcome">
     <form class="" action="game.html" method="post">
       Please Enter Your Company Name:
-      <input type="text" name="compName" value="">
+      <input type="text" id="compName" value="">
     </form>
     <button id="update">Enter Name</button>
+  </section>
 <script src="game.js" charset="utf-8"></script>
   </body>
 </html>

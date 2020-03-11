@@ -1,3 +1,4 @@
+console.log(Math.random())
 class Items {
   constructor(name,floorVal,cielVal,avgVal,weight,tax) {
     this.name = name,
@@ -10,13 +11,16 @@ class Items {
   }
 
   setPrice(){
-    let values = [((Math.random()*this.cielVal)+this.floorVal),(this.avgVal-Math.random()(this.avgVal*.3)),(this.avgVal+Math.random()(this.avgVal*.3)),(this.avgVal+Math.random()(this.avgVal*.10)),(this.avgVal-Math.random()(this.avgVal*.10))];
-    this.price = values[Math.floor(Math.random()*values.length)];
-    while(this.price<this.floorVal || this.price>this.cielVal){
-      this.setPrice();
-    }
-  }
-}
+    let values = [Math.round(((Math.random()*this.cielVal)+this.floorVal)),Math.round((this.avgVal-Math.random()*(this.avgVal*.3))),Math.round((this.avgVal+Math.random()*(this.avgVal*.3))),Math.round((this.avgVal+Math.random()*(this.avgVal*.10))),Math.round((this.avgVal-Math.random()*(this.avgVal*.10)))];
+       let price = values[Math.floor(Math.random()*values.length)];
+       //console.log(values);
+       this.price = price;
+       while(this.price<this.floorVal || this.price>this.cielVal){
+         this.setPrice();
+       }
+       return price
+     }
+   }
 
 
 let gold = new Items('gold',100,1300,650,10,22);
@@ -78,15 +82,4 @@ gold.countries = ['spain','usa','england','canada','mexico'];
 diamonds.countries = ['spain','usa','england','canada','mexico'];
 silver.countries = ['spain','usa','england','canada','mexico'];
 sugar.countries = ['spain','usa','england','canada','mexico'];
-
-console.log(usa);
-
-let company = {
-  name: '',
-  cash: 50000,
-  inventoryMax:50,
-  travelSpeed:1,
-  landTravel:true,
-  flightTravel:false,
-  seaTravel:true
-};
+//gold.setPrice()

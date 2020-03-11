@@ -2,7 +2,7 @@
   "name": "Trade Tycoon",
   "version": "1",
   "description": "Buy ,Sell and Trade to build your Empire!!",
-  "permissions": ["storage","tabs","declarativeContent"],
+  "permissions": ["storage", "tabs", "declarativeContent"],
   "options_page": "options.html",
   "background": {
     "scripts": ["background.js"],

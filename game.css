@@ -1,0 +1,10 @@
+#welcome {
+  visibility:visible;
+}
+body{background-color: grey;}
+h1{
+  font-size: 18px;
+  align-items: center;
+}
+form{background-color: black;
+color: white;}
